@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plan telefonico</title>
+    <style>
+        h3{
+            text-align: center;
+        }
+        div{
+            margin: 0 auto;
+            text-align: center;
+            padding: 12px;
+            border: 1px solid gray;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Plan telefónico</h3>
+    
+    <form>
+
+        <div>
+            <label for="nombre">Nombre: </label>
+            <input type="text" id="nombre" placeholder="Julio">
+        </div>
+
+        <div>
+            <label for="telefono">Móvil: </label>
+            <input type="text" id="telefono" placeholder="5501928373" pattern="[0-9]{10}"><br><br>
+        </div>
+        
+        <div>
+            <label for="plan">Selecciona tu plan: </label>
+            <select id="plan">
+                <option value="amigo1">Amigo 1 [2GB] $200</option>
+                <option value="amigo2">Amigo 2 [3GB] $300</option>
+                <option value="amigo3">Amigo 3 [5GB] $400</option>
+                <option value="amigo4">Amigo 4 [8GB] $500</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="color">Color del equipo: </label>
+            <input type="color" id="color">
+        </div>
+        
+        <div>
+            <label for="fecha">Fecha de cita: </label>
+            <input type="date" id="fecha">
+        </div>
+        
+        <div>
+            <input type="submit" value="Enviar">
+        </div>
+
+    </form>
+
+</body>
+</html>
