@@ -1,0 +1,15 @@
+
+:root{
+    /* Variables CSS: */
+    /* Paleta de colores: */ 
+    --black: #211d1d;
+    --white: #e2e2e2;
+    --gray: #444444;
+    --blue-forte: #45818e;
+    --blue-light: #76a5af;
+    /*Tamaños de fuentes: */
+    --sm: 14px;
+    --sm: 18px;
+    --md: 26px;
+    --lg: 36px;
+}
