@@ -13,3 +13,103 @@
     --md: 26px;
     --lg: 36px;
 }
+
+/* GENERAL */
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* CONTENEDOR 1 */
+.first-container{
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    background-image: url("https://cdn.pixabay.com/photo/2014/09/20/13/52/board-453758_960_720.jpg");
+    border-radius: 20px;
+    color: var(--black);
+}
+
+.title{
+    font-size: var(--lg);
+    margin: 0;
+}
+
+.job{
+    display: inline;
+}
+
+.programmer{
+    border-radius: 12px;
+    width: 56px;
+    margin-left: 16px;
+    /* Con position se mueve el elemento relativamente a la posición original*/
+    position: relative; 
+    top: 12px;
+
+}
+
+.subtitle{
+    font-size: var(--sm);
+}
+
+/* NAVBAR */
+.navbar{
+    width: 10%;
+    margin: 12px auto;
+    margin-left: 12px;
+    border-radius: 20px;
+    text-align: center;
+    position: fixed;
+}
+
+.navbar ul{
+    list-style-type: none;
+    background-color: var(--gray);
+    padding: 0;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.navbar li a{
+    display: block;
+    color: var(--white);
+    padding: 12px ;
+    text-decoration: none;
+}
+
+.navbar li a:hover{
+    background-color: var(--black);
+}
+
+/* CONTENEDOR 2 */
+.second-container{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    width: 68%;
+    margin: 40px auto;
+}
+
+.gandalf{
+    border: 1px solid var(--gray);
+    border-radius: 50%;
+}
+
+/* CONTENDOR 3 */
+.thrid-container{
+
+}
+
+/* CONTENEDOR 4 */
+.fourth-container{
+
+}
+
+/* CONTENEDOR 5 */
+.fifth-container{
+    background-color: var(--black);
+}
+
