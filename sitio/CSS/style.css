@@ -8,7 +8,7 @@
     --blue-forte: #45818e;
     --blue-light: #76a5af;
     /*Tamaños de fuentes: */
-    --sm: 14px;
+    --ssm: 14px;
     --sm: 18px;
     --md: 26px;
     --lg: 36px;
@@ -89,27 +89,117 @@ body{
 .second-container{
     display: grid;
     grid-template-columns: 20% 80%;
-    width: 68%;
-    margin: 40px auto;
+    width: 76%;
+    margin: 60px auto;
+    align-items: center; /* Centramos los elementos de arriba hacia abajo*/
+    border-top: 4px solid var(--gray);
+    border-bottom: 4px solid var(--gray);
+    border-radius: 0 20% 0 20%;
 }
 
 .gandalf{
     border: 1px solid var(--gray);
+    width: 180px;
     border-radius: 50%;
+    margin: 20px auto;
+}
+
+.about-me{
+    align-items: center;
+    text-align: center;
+    color: var(--black);
+    font-size: var(--sm);
+    margin: 24px;
+}
+
+.first-text{
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+.rocket, .social{
+    width: 100px;
+    margin-left: 20px;
+    position: relative;
+    top: 16px;
+    border-radius: 50%;
+    border: 2px solid var(--gray);
+}
+
+.second-text{
+    display: grid;
+    grid-template-columns: 20% 80%;
 }
 
 /* CONTENDOR 3 */
 .thrid-container{
+    width: 76%;
+    margin: 24px auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
 
 }
 
+.hobbies, .abilities, .languages{
+    background-color: var(--gray);
+    color: var(--white);
+    border-radius: 16px;
+    margin: 16px;
+    font-size: var(--ssm);   
+    padding: 0 20px; 
+}
+
+.hobbies:hover, .abilities:hover, .languages:hover{
+    background-color: var(--black);
+    color: var(--blue-light);
+}
+
+
 /* CONTENEDOR 4 */
 .fourth-container{
+    width: 76%;
+    margin: 20px auto;
+    text-align: center;
+    align-items: center;
+}
 
+.trip{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.espana{
+    width: 420px;
+    border-radius: 40px;
+    /*  OPCIÓN PARA CUANDO QUIERES DARLE ALTURA:
+        height: 200px;
+        object-fit: cover;
+    */
 }
 
 /* CONTENEDOR 5 */
 .fifth-container{
+    width: 76%;
+    margin: 0 auto;
     background-color: var(--black);
+    border-radius: 20% 20% 0 0;
+    text-align: center;
+    color: var(--white);
+    padding: 20px;
+    font-size: var(--sm);
+}
+
+.fifth-container:hover{
+    color: var(--blue-light);
+}
+
+.text-net{
+    margin: 0;
+}
+
+.fb, .in{
+    width: 80px;
+    margin: 0 auto;
 }
 
