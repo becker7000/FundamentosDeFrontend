@@ -1,0 +1,198 @@
+:root {
+    /* Paleta de colores */
+    --negro: #211d1d;
+    --blanco: #e2e2e2;
+    --gris: #444444;
+    --azul-fuerte: #45818e;
+    --azul-claro: #76a5af;
+
+    /* Tamaños de fuente */
+    --xs: 14px;
+    --sm: 18px;
+    --md: 26px;
+    --lg: 36px;
+}
+
+/* GENERAL */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--blanco);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* CONTENEDOR PRINCIPAL (HEADER) */
+.contenedor-principal {
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    background-image: url("https://cdn.pixabay.com/photo/2014/09/20/13/52/board-453758_960_720.jpg");
+    border-radius: 20px;
+    color: var(--negro);
+}
+
+.titulo {
+    font-size: var(--lg);
+    margin: 0;
+}
+
+.trabajo {
+    display: inline;
+}
+
+.programador {
+    border-radius: 12px;
+    width: 56px;
+    margin-left: 16px;
+    position: relative;
+    top: 12px;
+}
+
+.subtitulo {
+    font-size: var(--sm);
+}
+
+/* BARRA DE NAVEGACIÓN */
+.barra-navegacion {
+    width: 10%;
+    margin: 12px 0 0 12px;
+    position: fixed;
+    text-align: center;
+}
+
+.barra-navegacion ul {
+    list-style: none;
+    padding: 0;
+    background-color: var(--gris);
+    border-radius: 20px;
+}
+
+.barra-navegacion li a {
+    display: block;
+    color: var(--blanco);
+    padding: 12px;
+    text-decoration: none;
+}
+
+.barra-navegacion li a:hover {
+    background-color: var(--negro);
+}
+
+/* SECCIÓN ¿QUIÉN SOY? */
+.contenedor-secundario {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    width: 76%;
+    margin: 60px auto;
+    align-items: center;
+    border-top: 4px solid var(--gris);
+    border-bottom: 4px solid var(--gris);
+    border-radius: 0 20% 0 20%;
+}
+
+.gandalf {
+    width: 180px;
+    border-radius: 50%;
+    border: 1px solid var(--gris);
+    margin: 20px auto;
+}
+
+.sobre-mi {
+    text-align: center;
+    color: var(--negro);
+    font-size: var(--sm);
+    margin: 24px;
+}
+
+.texto-uno, .texto-dos {
+    display: grid;
+    gap: 12px;
+}
+
+.texto-uno {
+    grid-template-columns: 80% 20%;
+}
+
+.texto-dos {
+    grid-template-columns: 20% 80%;
+}
+
+.cohete, .social {
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid var(--gris);
+    margin-left: 20px;
+    position: relative;
+    top: 16px;
+}
+
+/* SECCIÓN HABILIDADES */
+.contenedor-tercero {
+    width: 76%;
+    margin: 24px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.pasatiempos, .habilidades, .lenguajes {
+    background-color: var(--gris);
+    color: var(--blanco);
+    border-radius: 16px;
+    font-size: var(--xs);
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pasatiempos:hover,
+.habilidades:hover,
+.lenguajes:hover {
+    background-color: var(--negro);
+    color: var(--azul-claro);
+}
+
+/* SECCIÓN LUGARES */
+.contenedor-cuarto {
+    width: 76%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.viajes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.espana {
+    width: 420px;
+    border-radius: 40px;
+}
+
+/* PIE DE PÁGINA (REDES) */
+.contenedor-quinto {
+    width: 76%;
+    margin: 0 auto;
+    background-color: var(--negro);
+    border-radius: 20% 20% 0 0;
+    text-align: center;
+    color: var(--blanco);
+    padding: 20px;
+    font-size: var(--sm);
+}
+
+.contenedor-quinto:hover {
+    color: var(--azul-claro);
+}
+
+.texto-redes {
+    margin: 0;
+}
+
+.fb, .in {
+    width: 80px;
+    margin: 0 10px;
+}
