@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+    crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f1f9f4;
+            color: #333;
+        }
+
+        .titulo {
+            background-color: #ffebcc;
+            color: darkred;
+            border: 2px solid #c4a0a0;
+            border-radius: 12px;
+            width: 70%;
+            margin: 30px auto;
+            padding: 25px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .titulo h2 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .titulo button {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .titulo button:hover {
+            background-color: #c9302c;
+        }
+
+        .contenedor {
+            border-top: 2px solid #ddd;
+            border-bottom: 2px solid #ddd;
+            border-radius: 8px;
+            width: 50%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #mostrar {
+            font-size: 18px;
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
+    <title>Usando JQuery</title>
+</head>
+<body>
+    
+    <div class="titulo">
+        <h2>Usando AJAX con JQuery</h2>
+        <button onclick="peticion()">Click</button>
+    </div>
+
+    <div class="contenedor">
+        <p id="mostrar"></p>
+    </div>
+
+    <script src="ajax_test_1.js"></script>
+
+</body>
+</html>

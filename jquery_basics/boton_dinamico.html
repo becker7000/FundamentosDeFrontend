@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo con jQuery .css()</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Ejemplo del método .css()</h2>
+  
+  <button id="cambiar-estilo" class="btn">Haz clic para cambiar el estilo</button>
+  <p id="texto" style="font-size: 18px;">Este es un texto que cambiará de color.</p>
+
+  <script>
+    
+    $(document).ready(function() {
+      // Evento para cambiar el estilo cuando se hace clic en el botón
+      $('#cambiar-estilo').click(function() {
+        // Cambiar el color de fondo y color del texto del botón
+        var colorFondo = $(this).css('background-color') === 'rgb(255, 0, 0)' ? 'green' : 'red';
+        var colorTexto = colorFondo === 'red' ? 'white' : 'black';
+        
+        // Cambiar el estilo del botón
+        $(this).css({
+          'background-color': colorFondo,
+          'color': colorTexto,
+          'border': 'none',
+          'font-weight': 'bold'
+        });
+
+        // Cambiar el estilo del texto
+        $('#texto').css({
+          'color': colorFondo === 'red' ? 'green' : 'blue'
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

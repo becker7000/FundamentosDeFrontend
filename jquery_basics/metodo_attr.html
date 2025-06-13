@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de attr() con Imágenes</title>
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+            transition: transform 1s ease;
+        }
+        img:hover {
+            transform: scale(1.1); /* Efecto de zoom cuando se pasa el ratón */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ejemplo de uso de attr() con imágenes</h1>
+    <img id="imagen1" src="imagenes/noviembre.png" alt="Imagen 1">
+    <img id="imagen2" src="imagenes/diciembre.png" alt="Imagen 2">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Al pasar el ratón por encima de la primera imagen, cambiamos el src
+            $('#imagen1').hover(
+                function() {
+                    // Al entrar el ratón, cambiamos la imagen (usando attr() para cambiar el src)
+                    $(this).attr('src', 'imagenes/calabaza.png');
+                },
+                function() {
+                    // Al salir el ratón, restauramos la imagen original
+                    $(this).attr('src', 'imagenes/noviembre.png');
+                }
+            );
+            
+            // Lo mismo para la segunda imagen
+            $('#imagen2').hover(
+                function() {
+                    // Al entrar el ratón, cambiamos la imagen
+                    $(this).attr('src', 'imagenes/santa.png');
+                },
+                function() {
+                    // Al salir el ratón, restauramos la imagen original
+                    $(this).attr('src', 'imagenes/diciembre.png');
+                }
+            );
+        });
+    </script>
+
+</body>
+</html>

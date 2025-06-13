@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Selectores básicos</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" 
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" 
+    crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<button id="btn">Haz clic en mí</button>
+<p class="texto">Este es un párrafo</p>
+
+<script>
+
+  $(document).ready(function() {
+    // Selección por id
+    $('#btn').click(function() {
+      alert('¡Botón clickeado!');
+    });
+    // Selección por clase
+    $('.texto').css('color', 'blue'); // Cambia el color del texto a azul
+  });
+
+  $(document).ready(function() {
+    alert('El DOM está listo...')
+  });
+
+</script>
+    
+</body>
+</html>

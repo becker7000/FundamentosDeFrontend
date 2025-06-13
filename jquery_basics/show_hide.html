@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Navegación Simple</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Barra de navegación */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+        }
+
+        .content {
+            margin-top: 80px; /* Deja espacio para la barra de navegación */
+            padding: 20px;
+            font-size: 20px;
+            color: #333;
+            text-align: center;
+            display: none; /* Oculta el contenido por defecto */
+        }
+
+        /* Estilos para el contenido visible */
+        .content.show {
+            display: block;
+        }
+
+        /* Estilo general para los enlaces en la barra */
+        .navbar a {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <div class="navbar">
+        <a href="#" id="mostrarEnlace">Mostrar Contenido</a>
+        <a href="#" id="ocultarEnlace">Ocultar Contenido</a>
+    </div>
+
+    <!-- Contenido que será mostrado/ocultado -->
+    <div id="miElemento" class="content">
+        <h2>¡Bienvenido a mi sitio web!</h2>
+        <p>Este es un contenido que puede ser mostrado u ocultado.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Mostrar el contenido
+            $('#mostrarEnlace').click(function(e) {
+                e.preventDefault(); // Evitar navegación
+                $('#miElemento').show(); // Muestra el contenido
+            });
+
+            // Ocultar el contenido
+            $('#ocultarEnlace').click(function(e) {
+                e.preventDefault(); // Evitar navegación
+                $('#miElemento').hide(); // Oculta el contenido
+            });
+
+        });
+    </script>
+
+</body>
+</html>

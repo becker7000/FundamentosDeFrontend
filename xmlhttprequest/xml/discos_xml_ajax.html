@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX - Colección de Discos</title>
+    <style>
+        table th, td{
+            text-align: center;
+            padding: 4px;
+        }
+
+    </style>
+</head>
+<body style="font-family: Arial">
+
+<div id="coleccion">
+    <h1>Mi colección de discos CD's</h1>
+    <p>Haz clic en el botón para ver la colección de discos</p>
+    <button onclick="cargarColeccion()">Ver colección</button>
+</div>
+
+<div id="contenedor">
+    <div id="mostrar"></div>
+</div>
+
+<script src="discos_xml_ajax.js"></script>
+
+</body>
+</html>

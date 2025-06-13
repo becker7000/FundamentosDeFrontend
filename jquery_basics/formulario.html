@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Usando getters y setters</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" 
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" 
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <h1>Formulario de Comentarios</h1>
+    <form id="comentarios-form">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre"><br><br>
+      
+      <label for="mensaje">Mensaje:</label><br>
+      <textarea id="mensaje" name="mensaje"></textarea><br><br>
+      
+      <button type="submit">Enviar</button>
+    </form>
+  
+    <div id="respuesta"></div>
+  
+    <h2>Comentarios Recientes:</h2>
+    <div id="comentarios-lista"></div>
+  
+    <script src="validacion.js"></script>
+    
+</body>
+</html>

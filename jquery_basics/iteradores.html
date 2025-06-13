@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Iteración con each, for y for...of</title>
+    <style>
+        .producto {
+            margin-bottom: 10px;
+        }
+        .producto span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lista de Productos</h1>
+    <ul id="productos">
+        <li class="producto">Producto A - $50</li>
+        <li class="producto">Producto B - $30</li>
+        <li class="producto">Producto C - $70</li>
+        <li class="producto">Producto D - $90</li>
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Lista de productos con precios (la usaran for y for of)
+        const productos = [
+            { nombre: 'Producto A', precio: 50 },
+            { nombre: 'Producto B', precio: 30 },
+            { nombre: 'Producto C', precio: 70 },
+            { nombre: 'Producto D', precio: 90 }
+        ];
+
+        // 1. Usando jQuery .each()
+        // Esta usando la lista (ul) que está en la vista
+        console.log("Usando jQuery .each():");
+        $('#productos li').each(function(index, element) {
+            const nombreProducto = $(element).text().split(' - ')[0];
+            const precioOriginal = parseInt($(element).text().split(' - ')[1].replace('$', ''));
+            const precioConDescuento = precioOriginal * 0.9; // 10% descuento
+            $(element).html(`${nombreProducto} - $${precioConDescuento.toFixed(2)} (descuento aplicado)`);
+        });
+
+        // 2. Usando el bucle tradicional for
+        console.log("\nUsando el bucle for:");
+        for (let i = 0; i < productos.length; i++) {
+            const producto = productos[i];
+            const precioConDescuento = producto.precio * 0.9; // 10% descuento
+            console.log(`${producto.nombre} - $${precioConDescuento.toFixed(2)} (descuento aplicado)`);
+        }
+
+        // 3. Usando el bucle for...of
+        console.log("\nUsando el bucle for...of:");
+        for (const producto of productos) {
+            const precioConDescuento = producto.precio * 0.9; // 10% descuento
+            console.log(`${producto.nombre} - $${precioConDescuento.toFixed(2)} (descuento aplicado)`);
+        }
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CATALOG>
+
+    <CD>
+        <TITLE>Dead Club City</TITLE>
+        <ARTIST>Nothing But Thieves</ARTIST>
+        <PRICE>350.00</PRICE>
+        <YEAR>2023</YEAR>
+    </CD>
+
+    <CD>
+        <TITLE>In Times New Roman...</TITLE>
+        <ARTIST>Queens of the Stone Age</ARTIST>
+        <PRICE>380.00</PRICE>
+        <YEAR>2023</YEAR>
+    </CD>
+
+    <CD>
+        <TITLE>La Realidad de los Sueños</TITLE>
+        <ARTIST>The Mars Volta</ARTIST>
+        <PRICE>400.00</PRICE>
+        <YEAR>2022</YEAR>
+    </CD>
+
+    <CD>
+        <TITLE>Wilderness of Mirrors</TITLE>
+        <ARTIST>The Black Angels</ARTIST>
+        <PRICE>370.00</PRICE>
+        <YEAR>2022</YEAR>
+    </CD>
+
+    <CD>
+        <TITLE>But Here We Are</TITLE>
+        <ARTIST>Foo Fighters</ARTIST>
+        <PRICE>420.00</PRICE>
+        <YEAR>2023</YEAR>
+    </CD>
+
+    <CD>
+        <TITLE>Return of the Dream Canteen</TITLE>
+        <ARTIST>Red Hot Chili Peppers</ARTIST>
+        <PRICE>450.00</PRICE>
+        <YEAR>2022</YEAR>
+    </CD>
+
+</CATALOG>
