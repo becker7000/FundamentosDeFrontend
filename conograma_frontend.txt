@@ -1,0 +1,46 @@
+
+
+JAVASCRIPT: (1 clase de 2 horas y media)
+1. basicos_js.html (10 minutos)
+2. variables.js (20 minutos)
+3. scopes.js (20 minutos)
+4. func_test_1.js (20 minutos)
+5. [EJERCICIO] func_test_2.js (20 minutos)
+6. exp_func.js (15 minutos)
+7. autoinvocada.js (15 minutos)
+8. func.fecha.js + [EJERCICIO] (15 minutos)
+9. objeto_lit.js (15 minutos) [fin de jsbasics]
+
+JQUERY: (1 clase de 2 horas y media) + (1 hora y 10 minutos (opcional))
+1. Introducción a JQuery e instalación de VSC y Live Server (10 minutos)
+2. selectores_basicos (15 minutos)
+3. manejo_errores (15 minutos)
+4. formulario y validación.js (30 minutos)
+5. boton_dinamico (30 minutos)
+6. manejo_clases (15 minutos)
+7. toggle_test (10 minutos)
+8. show_hide (30 minutos)
+9. iteradores (20 minutos)
+10. metodo_attr (20 minutos)
+11. dimensiones (25 minutos)
+
+AJAX: (2 clases de 2 horas y media)
+1. Introducción a AJAXn (crear carpeta AJAX) (15 minutos)
+2. index.html (15 minutos)
+3. JS -> XMLHttpRequest <texto> (15 minutos)
+4. JS -> XMLHttpRequest <xml> (45 minutos)
+5. JQ -> Ejemplo 1 (45 minutos)
+6. JQ -> Ejemplo 2 (45 minutos)
+7. JQ -> Ejemplo 3 (30 minutos)
+8. JQ -> Ejemplo 4 (90 minutos)
+
+PROYECTO PENDULO-API (1 clase de 2 horas y media)
+
+
+
+
+
+
+
+
+
