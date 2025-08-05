@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat WebSocket</title>
+</head>
+<body>
+
+    <h2>Chat en tiempo real</h2>
+
+    <div>
+        <label for="username">Escribe tu nombre: </label>
+        <input type="text" id="username" placeholder="Ej: Juan">
+    </div>
+
+    <div id="chat" style="border:1px solid #ccc; height:200px; overflow:auto; padding:5px;"></div>
+    <input type="text" id="msg" placeholder="Escribe un mensaje..." autofocus />
+    <button onclick="enviar()">Enviar</button>
+
+<script src="script.js"></script>
+</body>
+</html>

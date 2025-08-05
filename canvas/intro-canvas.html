@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intro a canvas</title>
+    <style>
+        canvas{
+            display: block;
+            margin: 20px;
+        }
+        #rectanguloCanvas{
+            border: 2px solid darkslategray;
+            display: block;
+        }
+        #circuloCanvas{
+            border: 1px solid cadetblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Mis primeros canvas</h2>
+
+    <canvas id="rectanguloCanvas" width="200" height="100">
+        Tú navegador no soporta canvas.
+    </canvas>
+
+    <canvas id="circuloCanvas" width="200" height="100">
+
+    </canvas>
+
+    <script>
+        var c = document.getElementById("rectanguloCanvas");
+        var ctx = c.getContext("2d");
+        //ctx.moveTo(0, 0); // Inicio de la línea
+        //ctx.lineTo(200, 100); // Fin de la línea
+        // Ahora al revés
+        ctx.moveTo(0,100);
+        ctx.lineTo(200,0);
+        ctx.stroke(); /// Se dibuja en el lienzo
+
+        var c2 = document.getElementById("circuloCanvas")
+        ctx = c2.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(95,50,40,0,Math.PI*2);
+        ctx.stroke();
+
+        /*
+            ctx.arc(x, y, radius, startAngle, endAngle);
+            x = 95 → Coordenada horizontal del centro del círculo.
+            y = 50 → Coordenada vertical del centro del círculo.
+            radius = 40 → Radio del círculo.
+            startAngle = 0 → Ángulo inicial en radianes (0 radianes = punto hacia la derecha).
+            endAngle = 2 * Math.PI → Ángulo final (2π radianes = círculo completo = 360°).
+        */
+
+    </script>
+    
+</body>
+</html>

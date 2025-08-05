@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Fractal con Canvas</title>
+  <style>
+    body{
+        font-family: 'Arial';
+    }
+    canvas {
+      background-color: #f2f2f2;
+      display: block;
+      margin: 0 auto;
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center;">Árbol fractal con HTML5 Canvas</h2>
+  <canvas id="fractalCanvas" width="600" height="500"></canvas>
+
+  <script>
+    
+    // Obtener el elemento <canvas> del DOM por su ID
+    const canvas = document.getElementById('fractalCanvas');
+
+    // Obtener el contexto 2D del canvas para poder dibujar
+    const ctx = canvas.getContext('2d');
+
+    // Función recursiva para dibujar una rama del árbol fractal
+    function drawBranch(x, y, length, angle, depth, branchWidth) {
+
+    // Caso base de la recursión: si la profundidad es 0, no se dibuja nada más
+    if (depth === 0) return;
+
+    // Iniciar un nuevo trazo
+    ctx.beginPath();
+
+    // Guardar el estado actual del contexto (posición, rotación, estilo, etc.)
+    ctx.save();
+
+    // Mover el origen del sistema de coordenadas al punto (x, y)
+    ctx.translate(x, y);
+
+    // Rotar el sistema de coordenadas en el ángulo dado (convertido a radianes)
+    ctx.rotate(angle * Math.PI / 180);
+
+    // Dibujar una línea desde el punto actual (0,0) hacia arriba (-length)
+    ctx.moveTo(0, 0);
+    ctx.lineTo(0, -length);
+
+    // Establecer el color de la rama en tonos de verde que cambian según la profundidad
+    ctx.strokeStyle = `rgb(0, ${Math.floor(128 + 4 * depth)}, 0)`;
+
+    // Establecer el grosor de la rama
+    ctx.lineWidth = branchWidth;
+
+    // Dibujar la línea en el lienzo
+    ctx.stroke();
+
+    // Calcular las nuevas coordenadas (punto final de la rama actual)
+    const newX = 0;
+    const newY = -length;
+
+    // Llamada recursiva para la rama izquierda (ángulo más cerrado)
+    drawBranch(
+        newX,                 // x relativo a la rama actual
+        newY,                 // y relativo a la rama actual
+        length * 0.7,         // reducir longitud de la rama
+        angle - 20,           // ángulo hacia la izquierda
+        depth - 1,            // reducir profundidad
+        branchWidth * 0.7     // reducir grosor
+    );
+
+    // Llamada recursiva para la rama derecha (ángulo más abierto)
+    drawBranch(
+        newX,
+        newY,
+        length * 0.7,
+        angle + 20,           // ángulo hacia la derecha
+        depth - 1,
+        branchWidth * 0.7
+    );
+
+    // Restaurar el estado anterior del contexto antes de la recursión
+    ctx.restore();
+    }
+
+
+    // Iniciar dibujo
+    drawBranch(300, 400, 100, 0, 8, 10); // x, y, largo, ángulo, profundidad, grosor
+  </script>
+</body>
+</html>
